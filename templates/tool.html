@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+
+{% block tool_to_be %} 
+<form method="POST" enctype="multipart/form-data">
+	
+<table>
+	<tr>
+		<td>Convert from: </td> <td> <select name="convert_from">
+			<option value="word">Word</option>
+			<option value="excel">Excel</option>
+			<option value="json">Json</option>
+		</select> </td>
+
+		<td> To: </td> <td> <select name="convert_from">
+			<option value="PDF">PDF</option>
+			<option value="word">Word</option>
+		</select> </td>
+	</tr>
+
+	<tr>
+		<td>Then Select The file to Convert:</td>
+		<td>
+			<input type="file" name="file_to_convert">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<button type="submit">
+				Start!
+			</button>
+		</td>
+	</tr>
+</table>
+
+</form>
+<p>
+<h3>Your Converted Files are here!</h3>
+<hr>
+
+<div style="padding: 2%; width: 86%; border: 1px dotted darkgreen;">
+	Files Here/ Error Message
+</div>
+ {% endblock %}
+
+ {% block sentensi %}
+ <center>All Rights Reserverd Tool 2024&copy;</center>
+ {% endblock %}
